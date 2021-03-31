@@ -1,6 +1,9 @@
 # woof-python
 Making python simpler to kids. Hopefully.
 
+# Woof Editor
+Automated .howl creation and quick project set up coming soon™
+
 # How to use
 Create a new file with the .txt or .howl file extentsion, and put the readfile.py file in the same directory. Edit readfile.py to have your .howl instead of testfile.howl.
 
