@@ -131,7 +131,7 @@ print("\   \/\/   /  _ \ /  _ \   __\ ");
 print(" \        (  <_> |  <_> )  |");
 print("  \__/\  / \____/ \____/|__|   ");
 print("       \/                   ");
-print("Version Alpha 1.1");
+print("Version Alpha 1.2");
 time.sleep(1);
 print("Starting Woof");
 cmd();
