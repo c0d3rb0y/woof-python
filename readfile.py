@@ -1,7 +1,6 @@
- # Using readlines()
+# Using readlines()
 file1 = open("testfile.howl", 'r')
 Lines = file1.readlines()
- 
 count = 0
 # Strips the newline character
 for line in Lines:
