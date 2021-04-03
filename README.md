@@ -22,4 +22,4 @@ Any python works, as long as it's on one line. Check testfile.howl for a little 
 help - help screen
 amogus - red is sus vote him out
 # Known errors
-commandline.py and readspecifiedfile.py only work in IDLE 3.8.4 for some reason. Luckily these are only meant to be used for development purpouses and the one that actually works is the one for publishing games.
+~~commandline.py and readspecifiedfile.py only work in IDLE 3.8.4 for some reason. Luckily these are only meant to be used for development purpouses and the one that actually works is the one for publishing games.~~ nope it works in IDLE 3.9.2, it just didn't want to work with my windows store installation of 3.8.8.
