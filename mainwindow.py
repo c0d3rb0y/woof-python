@@ -4,8 +4,13 @@ from tkinter import ttk
 from tkinter.ttk import *
 import time
 # create window 
+global textbox
+
 root = Tk() 
- 
+
+backupf = open("backupf.howl", "a")
+backupf.close()
+
 # stuffs
 root.geometry("600x300")
 root.minsize(height=560)
@@ -28,7 +33,6 @@ text_info.pack(fill=BOTH)
 #    root.after(1000, gettextloop)
 
 def saveas():
-    global textbox
     textbox = text_info.get("1.0",'end-1c')
     print("Text to save:", textbox)
     text_info.delete("1.0", "end")
@@ -48,15 +52,38 @@ def savetofile():
     sfile = open(fname, "a")
     sfile.write(savetext)
     sfile.close()
-    time.sleep(1);
     text_info.delete("1.0", "end")
     text_info.insert("1.0", "File saved.")
-    time.sleep(1);
     text_info.delete("1.0", "end")
+    buton = Button(root, text="Save", command = saveas);
+    buton.place(x=0,y=275)
+
+def openfile2():
+    fname = text_info.get("2.0", 'end-1c')
+    ext = ".howl"
+    fname += ext
+    ofile = open(fname, "r")
+    readtext = ofile.read()
+    text_info.delete("1.0", "end")
+    text_info.insert("1.0", readtext)
+    buton2 = Button(root, text="Open", command = openfile);
+    buton2.place(x=0,y=250)
+
+def openfile():
+    textbox = text_info.get("1.0",'end-1c')
+    backupf = open("backupf.howl", "w+")
+    backupf.write(textbox);
+    backupf.close()
+    text_info.delete("1.0", "end")
+    text_info.insert("1.0", "What is the file's name?\n");
+    buton2 = Button(root, text="Open", command = openfile2);
+    buton2.place(x=0,y=250)
 
 # add button
 buton = Button(root, text="Save", command = saveas);
 buton.place(x=0,y=275)
+buton2 = Button(root, text="Open", command = openfile);
+buton2.place(x=0,y=250)
 # start
 text_info.configure(font = Font)
 #root.after(1000, gettextloop)
