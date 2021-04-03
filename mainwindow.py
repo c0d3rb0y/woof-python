@@ -2,6 +2,7 @@
 from tkinter import *
 from tkinter import ttk
 from tkinter.ttk import *
+import time
 # create window 
 root = Tk() 
  
@@ -25,9 +26,33 @@ text_info.pack(fill=BOTH)
 #    textbox = text_info.get("1.0",'end-1c')
 #    print(textbox)
 #    root.after(1000, gettextloop)
+
 def saveas():
+    global textbox
     textbox = text_info.get("1.0",'end-1c')
-    print(textbox)
+    print("Text to save:", textbox)
+    text_info.delete("1.0", "end")
+    text_info.insert("1.0", "What is the file's name?\n");
+    buton = Button(root, text="Save .howl", command = savetofile);
+    buton.place(x=0,y=275)
+
+def savetofile():
+    savetext = textbox;
+    fname = text_info.get("2.0", 'end-1c')
+    print("File name:", fname)
+    text_info.delete("1.0", "end")
+    text_info.insert("1.0", "Saving...")
+    ext = ".howl"
+    fname += ext
+    print("File to save:",fname)
+    sfile = open(fname, "a")
+    sfile.write(savetext)
+    sfile.close()
+    time.sleep(1);
+    text_info.delete("1.0", "end")
+    text_info.insert("1.0", "File saved.")
+    time.sleep(1);
+    text_info.delete("1.0", "end")
 
 # add button
 buton = Button(root, text="Save", command = saveas);
