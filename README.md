@@ -1,14 +1,13 @@
 # woof-python
 Making python simpler to kids. Hopefully.
 
-# Woof Editor
-Automated .howl creation and quick project set up coming soon™
-
-# How to use
-Create a new file with the .txt or .howl file extentsion, and put the readfile.py file in the same directory. Edit readfile.py to have your .howl instead of testfile.howl.
+# How-to
+First, make sure you have some kind of text editor and an installation of python. After doing so, create a new file with the .howl file extentsion. Put readfile.py in the same directory. Code your .howl (not detailing how here, go to the wiki page to find instructions for a your first program). Edit with your readfile.py to have your .howl instead of testfile.howl. Finally, run readfile.py. It will output in text.
 
 # All commands
-say message - replace message with what you want it to say (basically reinventing the print command)
+wait 1 - replace the 1 with your time to wait
+
+say message - replace message with what you want it to say
 
 close - exit program
 
@@ -21,8 +20,3 @@ mult 1 1 - multiplication, just replace the 1s with your stuff
 div 1 1 - division, just replace the 1s with your numbers
 
 Any python works, as long as it's on one line. Check testfile.howl for a little more understanding.
-# Command-line only commands
-help - help screen
-amogus - red is sus vote him out
-# Known errors
-commandline.py and readspecifiedfile.py only work in IDLE 3.8.4 for some reason. Luckily these are only meant to be used for development purpouses and the one that actually works is the one for publishing games.
