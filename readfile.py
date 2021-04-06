@@ -1,3 +1,4 @@
+import time
 # Using readlines()
 file1 = open("testfile.howl", 'r')
 Lines = file1.readlines()
@@ -9,6 +10,12 @@ for line in Lines:
     num1 = 0;
     num2 = 0;
     cmdfound = 0;
+    if ("wait" in rawin[:4]):
+        waittime = 0
+        cmdfound = 1;
+        waittime = int(rawin[5:])
+        time.sleep(waittime)
+
     if ("add" in rawin[:3]):
         cmdfound = 1;
         spaceloc = rawin[4:].find(" ") + 4;
