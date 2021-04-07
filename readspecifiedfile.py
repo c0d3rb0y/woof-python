@@ -1,4 +1,6 @@
-print("WARNING: This might not run in anything except IDLE 3.8.4 for some reason. The other one is fine.");
+
+
+print("WARNING: This file is unsupported and may not recieve updates!");
 filetoread = input("File to read:\n")
 print(filetoread);
 # Using readlines()

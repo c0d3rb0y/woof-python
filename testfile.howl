@@ -1,5 +1,5 @@
-import time;
 say This is a test file.
+wait 1
 say Addition test: 1+10
 add 1 10
 say Subtraction test: 2-3
@@ -8,6 +8,16 @@ say Multiplication test: 2x4
 mult 2 4
 say Division test: 25/5
 div 25 5
+say Variable Testing
+wait 1
+say |  Variable Creation
+save new teststr
+print(varlist);
+say |  Variable set test
+save set teststr Woof
+print(varlist);
+say |  Variable read test
+read teststr
 say Python Integration test:
 test = "Test String";
 time.sleep(0.5);
@@ -17,23 +27,23 @@ print("You said:", inputtest);
 iftest = input("Type what you just typed again\n");
 if iftest == inputtest: print("You typed your first message again.");
 if iftest != inputtest: print("You did not type your first message again.");
-time.sleep(1);
+wait 1
 say Fail sense test:
 thisisnotacommand
-time.sleep(1);
+wait 1
 say Test completed.
-time.sleep(1);
+wait 1
 say This functionality test will close in:
 say 5
-time.sleep(1);
+wait 1
 say 4
-time.sleep(1);
+wait 1
 say 3
-time.sleep(1);
+wait 1
 say 2
-time.sleep(1);
+wait 1
 say 1
-time.sleep(1);
+wait 1
 say Bye!
-time.sleep(1);
+wait 1
 close
